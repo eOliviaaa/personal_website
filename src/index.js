@@ -1,6 +1,6 @@
-function getAge() {
+function getAge(dob) {
     let today = new Date();
-    let birthDate = new Date("2002-10-03");
+    let birthDate = new Date(dob);
     let age = today.getFullYear() - birthDate.getFullYear();
     let m = today.getMonth() - birthDate.getMonth();
 
@@ -9,8 +9,8 @@ function getAge() {
     return age;
 }
 
-function getUniYear() {
-    let year = new Date().getFullYear() - 2022;
+function getUniYear(admissionYear) {
+    let year = new Date().getFullYear() - admissionYear;
 
     if(year == 1) year += "st";
     else if(year == 2) year += "nd";
@@ -20,5 +20,4 @@ function getUniYear() {
     return year;
 }
 
-
-document.getElementById("introduction").innerHTML = `Heiii! I'm Olivia, a ${getAge()} years old trans woman from Norway. I am currently studying applied computer technologies at a bachelor level in my ${getUniYear()} year.`;
+document.getElementById("introduction").innerHTML = "Heiii! I'm Olivia, a " + getAge("2002-10-03") + " years old trans woman from Norway. I am currently studying applied computer technologies at a bachelor level in my " + getUniYear(2022) + " year.";;

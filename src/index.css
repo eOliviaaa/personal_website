@@ -3,16 +3,44 @@ body {
 
     display: flex;
     justify-content: center;
+    overflow: hidden;
 }
 
 main {
     margin-top: 3vw;
     height: 30vw;
     width: 30vw;
+    border-radius: 0vw, 5vw, 0vw, 5vw;
     background-color: rgb(21, 21, 21, 0.8);
 }
 
-h1, p {
+h1, h2, p, ul {
     margin-left: 1vw;
     color: white;
+}
+
+ul {
+    list-style-type: "\1F33A";
+}
+li {
+    padding-left: 0.5vw;
+}
+
+a {
+    color: hotpink;
+}
+
+
+@media only screen and (max-width: 800px) {
+    main {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1300px) {
+    main {
+        height: 100%;
+        width: 60vw;
+    }
 }

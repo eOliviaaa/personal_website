@@ -1,6 +1,11 @@
+@font-face {
+    font-family: Calibri;
+    src: url(../resources/Calibri/calibri.ttf);
+}
+
 body {
     background-image: url(../resources/trans-flag.png);
-
+    font-family: Calibri;
     display: flex;
     justify-content: center;
     overflow: hidden;
@@ -10,7 +15,9 @@ main {
     margin-top: 3vw;
     height: 30vw;
     width: 30vw;
-    border-radius: 0vw, 5vw, 0vw, 5vw;
+    border: none;
+    border-radius: 0vw, 5vw, 0vw, 5vw; /* Hey if you're looking here, why doesn't the border radius work? I can't figure it out lol ;-; */
+    overflow: hidden;
     background-color: rgb(21, 21, 21, 0.8);
 }
 
@@ -38,7 +45,7 @@ a {
     }
 }
 
-@media only screen and (min-width: 800px) and (max-width: 1300px) {
+@media only screen and (min-width: 800px) and (max-width: 1550px) {
     main {
         height: 100%;
         width: 60vw;
